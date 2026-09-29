@@ -1,0 +1,344 @@
+{
+  "research_date": "2026-09-29",
+  "scope": {
+    "anchor_city": "Benidorm, Spain",
+    "buyer_profile": "International residential buyer, property budget from EUR 1,000,000",
+    "approach": "Exceptional-value amenities only; Benidorm plus its practical premium catchment on Costa Blanca.",
+    "category_enum": [
+      "education",
+      "fine_dining",
+      "golf_sport",
+      "yachting_water",
+      "nature_beach",
+      "health_wellness",
+      "connectivity",
+      "luxury_lifestyle"
+    ]
+  },
+  "places": [
+    {
+      "name": "Elian's British School of La Nucía",
+      "latitude": 38.58745,
+      "longitude": -0.14569,
+      "coordinate_precision": "mapped",
+      "category": "education",
+      "photo": {
+        "source_page_url": "https://elians-british-school-la-nucia.dukeseducation.es/en/",
+        "selection": "Official campus/sea-and-mountain-view hero image",
+        "usage_note": "Use the official source page to obtain/licence the image; avoid hotlinking transient CDN URLs."
+      },
+      "summary": "One of the strongest education arguments close to Benidorm: British curriculum from early years through secondary, plus the IB Diploma. Particularly relevant to internationally mobile families and families combining academics with high-level sport.",
+      "rating": {
+        "score": 3.98,
+        "scale": 5,
+        "aggregator": "BuscoColegio",
+        "review_count": 19,
+        "note": "School-review sample is relatively small; treat as sentiment, not academic-quality ranking."
+      },
+      "official_or_primary_source_url": "https://ibo.org/es/school/062368/"
+    },
+    {
+      "name": "Lady Elizabeth School",
+      "latitude": 38.72836,
+      "longitude": 0.16162,
+      "coordinate_precision": "mapped",
+      "category": "education",
+      "photo": {
+        "source_page_url": "https://www.ladyelizabethschool.com/en/",
+        "selection": "Official campus hero image showing the Cumbre del Sol setting",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "A serious British-school option for buyers willing to use the wider Costa Blanca catchment: ages 2–18, British pathway, highly international student body and boarding from age 13. It adds a boarding-school-style option that Benidorm itself does not offer at this level.",
+      "rating": {
+        "score": 3.8,
+        "scale": 5,
+        "aggregator": "Micole",
+        "review_count": 110,
+        "note": "Aggregator sentiment only; not an academic league-table score."
+      },
+      "official_or_primary_source_url": "https://www.ladyelizabethschool.com/en/"
+    },
+    {
+      "name": "Lope de Vega International School",
+      "latitude": 38.54417,
+      "longitude": -0.10478,
+      "coordinate_precision": "mapped",
+      "category": "education",
+      "photo": {
+        "source_page_url": "https://www.lopedevega.es/en/",
+        "selection": "Official campus image showing academic and sports facilities",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "The most convenient substantial international-school proposition inside Benidorm itself: a large campus around 1.5 km from the sea, boarding/residential capability and extensive sports infrastructure. Convenience is the core buyer value here.",
+      "rating": {
+        "score": 4.0,
+        "scale": 5,
+        "aggregator": "Google Business Profile via local review aggregator",
+        "review_count": 92
+      },
+      "official_or_primary_source_url": "https://www.lopedevega.es/en/"
+    },
+    {
+      "name": "Quique Dacosta Restaurante",
+      "latitude": 38.85374,
+      "longitude": 0.0851,
+      "coordinate_precision": "mapped",
+      "category": "fine_dining",
+      "photo": {
+        "source_page_url": "https://en.quiquedacosta.es/",
+        "selection": "Official restaurant/culinary hero photography",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "The region's destination-dining anchor: three Michelin stars in the 2026 Guide and a globally recognised chef-led experience in Dénia. For a luxury buyer, this materially upgrades the perception of the northern Costa Blanca from resort coast to serious gastronomic territory.",
+      "rating": {
+        "score": 4.5,
+        "scale": 5,
+        "aggregator": "Google via Restaurant Guru",
+        "review_count": 1491
+      },
+      "official_or_primary_source_url": "https://guide.michelin.com/en/comunidad-valenciana/denia/restaurant/quique-dacosta"
+    },
+    {
+      "name": "BonAmb",
+      "latitude": 38.76979,
+      "longitude": 0.14831,
+      "coordinate_precision": "mapped",
+      "category": "fine_dining",
+      "photo": {
+        "source_page_url": "https://bonamb.com/en/",
+        "selection": "Official restaurant and garden/terrace imagery",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "Two Michelin stars in the 2026 Guide, giving the Benidorm–Marina Alta corridor a second genuine destination restaurant rather than a single isolated flagship. This matters to buyers who value repeatable fine-dining depth.",
+      "rating": {
+        "score": 4.6,
+        "scale": 5,
+        "aggregator": "Google via Restaurant Guru",
+        "review_count": 781
+      },
+      "official_or_primary_source_url": "https://guide.michelin.com/en/comunidad-valenciana/xbia/restaurant/bonamb"
+    },
+    {
+      "name": "Orobianco",
+      "latitude": 38.6667,
+      "longitude": 0.0372,
+      "coordinate_precision": "approximate_from_address",
+      "category": "fine_dining",
+      "photo": {
+        "source_page_url": "https://orobianco.es/en/",
+        "selection": "Official terrace image with Mediterranean and Peñón de Ifach panorama",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "A one-Michelin-star 2026 restaurant in Calpe whose strongest real-estate-sales value is the combination of high-end Italian cooking, rooftop/private-event potential and dramatic Peñón de Ifach/Mediterranean views.",
+      "rating": {
+        "score": 4.6,
+        "scale": 5,
+        "aggregator": "Google via Restaurant Guru",
+        "review_count": 454
+      },
+      "official_or_primary_source_url": "https://guide.michelin.com/en/comunidad-valenciana/calp/restaurant/orobianco"
+    },
+    {
+      "name": "Villaitana Golf",
+      "latitude": 38.55417,
+      "longitude": -0.15078,
+      "coordinate_precision": "mapped",
+      "category": "golf_sport",
+      "photo": {
+        "source_page_url": "https://www.villaitana.com/",
+        "selection": "Panoramic course image showing fairways, resort and Benidorm skyline",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "The clearest golf argument inside Benidorm: two distinct 18-hole Nicklaus Design courses, including the 6,576 m Levante championship-style course, plus academy and practice facilities. It converts golf from a day-trip amenity into a routine lifestyle amenity.",
+      "rating": {
+        "score": 4.4,
+        "scale": 5,
+        "aggregator": "Google via review aggregator",
+        "review_count": 860
+      },
+      "official_or_primary_source_url": "https://www.villaitana.com/"
+    },
+    {
+      "name": "Marina Greenwich / Puerto Deportivo Campomanes",
+      "latitude": 38.628983,
+      "longitude": -0.002833,
+      "coordinate_precision": "nautical_map",
+      "category": "yachting_water",
+      "photo": {
+        "source_page_url": "https://marinagreenwich.com/en/",
+        "selection": "Official aerial marina image with the bay and yacht berths",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "The strongest nearby yachting infrastructure for a premium homeowner: 542 berths for boats roughly 7–40 m, 24-hour staff, dry dock, yacht-management services and a waterfront commercial/restaurant area. Much more persuasive for a yacht owner than Benidorm's small city marina alone.",
+      "rating": {
+        "score": 4.3,
+        "scale": 5,
+        "aggregator": "Tripadvisor",
+        "review_count": null
+      },
+      "official_or_primary_source_url": "https://marinagreenwich.com/en/"
+    },
+    {
+      "name": "Club Nàutic de Benidorm",
+      "latitude": 38.5354,
+      "longitude": -0.13285,
+      "coordinate_precision": "approximate_entrance",
+      "category": "yachting_water",
+      "photo": {
+        "source_page_url": "https://www.comunitatvalenciana.com/es/alacant-alicante/benidorm/nautica/club-nautico-de-benidorm",
+        "selection": "Harbour/club image showing the city-centre waterfront setting",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "Small rather than superyacht-scale, but strategically valuable because it puts sailing, rowing, kayaking and regatta activity directly in Benidorm. The buyer value is daily convenience and access to the sea, not marina scale.",
+      "rating": {
+        "score": 4.3,
+        "scale": 5,
+        "aggregator": "Google via local review aggregator",
+        "review_count": 933
+      },
+      "official_or_primary_source_url": "https://www.comunitatvalenciana.com/es/alacant-alicante/benidorm/nautica/club-nautico-de-benidorm"
+    },
+    {
+      "name": "Parc Natural de la Serra Gelada",
+      "latitude": 38.547,
+      "longitude": -0.077,
+      "coordinate_precision": "park_reference_point",
+      "category": "nature_beach",
+      "photo": {
+        "source_page_url": "https://commons.wikimedia.org/wiki/File:Parque_natural_de_Serra_Gelada,_Benidorm,_2017-10-15,_Tripleca%C3%B1a_11.jpg",
+        "selection": "Cliff-and-sea landscape from the Benidorm side of Serra Gelada",
+        "usage_note": "Check the licence and attribution shown on the Wikimedia Commons file page."
+      },
+      "summary": "Benidorm's most defensible natural-luxury asset: a protected maritime-terrestrial landscape with cliffs over 300 m, hiking and marine habitat immediately beside the urban coast. It gives high-rise waterfront living a genuine nature counterweight.",
+      "rating": {
+        "score": 4.6,
+        "scale": 5,
+        "aggregator": "Google via review aggregator",
+        "review_count": 10737
+      },
+      "official_or_primary_source_url": "https://parquesnaturales.gva.es/es/web/pn-serra-gelada"
+    },
+    {
+      "name": "Playa de Poniente",
+      "latitude": 38.537222,
+      "longitude": -0.148611,
+      "coordinate_precision": "official_beach_reference_point",
+      "category": "nature_beach",
+      "photo": {
+        "source_page_url": "https://www.visitbenidorm.es/ver/127/playa-de-poniente.html",
+        "selection": "Wide-angle beach and sculptural promenade image",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "The strongest premium-residential beach story in Benidorm: about 3.1 km of sand, a calmer positioning than Levante and a distinctive promenade. It is especially relevant for luxury towers and apartments where walk-out beach access is the central purchase emotion.",
+      "rating": {
+        "score": 4.6,
+        "scale": 5,
+        "aggregator": "Google",
+        "review_count": 203
+      },
+      "official_or_primary_source_url": "https://www.aemet.es/en/eltiempo/prediccion/playas/ponent-playa-de-poniente-0303104"
+    },
+    {
+      "name": "SHA Wellness Clinic",
+      "latitude": 38.55954,
+      "longitude": -0.07318,
+      "coordinate_precision": "published_location",
+      "category": "health_wellness",
+      "photo": {
+        "source_page_url": "https://shawellness.com/",
+        "selection": "Official panoramic SHA building/pool image overlooking the Mediterranean",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "A globally recognised luxury medical-wellness and longevity destination next to Benidorm's northern edge. For affluent buyers, this is one of the region's rare amenities that can credibly compete with established international wellness destinations.",
+      "rating": {
+        "score": 4.3,
+        "scale": 5,
+        "aggregator": "Google via hospitality aggregator",
+        "review_count": 239
+      },
+      "official_or_primary_source_url": "https://shawellness.com/"
+    },
+    {
+      "name": "ZEM Wellness Clinic Altea",
+      "latitude": 38.634,
+      "longitude": -0.0145,
+      "coordinate_precision": "approximate_from_address",
+      "category": "health_wellness",
+      "photo": {
+        "source_page_url": "https://zemaltea.com/en/",
+        "selection": "Official architecture/interior image showing the high-end longevity-clinic environment",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "A new-generation luxury longevity clinic in Altea Hills combining diagnostics, personalised programmes, regenerative/integrative medicine, spa and fitness. Together with SHA, it creates an unusually dense high-end wellness cluster for this part of Spain.",
+      "rating": {
+        "score": 5.0,
+        "scale": 5,
+        "aggregator": "Tripadvisor",
+        "review_count": 9,
+        "note": "Very small review sample; do not compare the score directly with mature venues."
+      },
+      "official_or_primary_source_url": "https://zemaltea.com/en/"
+    },
+    {
+      "name": "IMED Levante Hospital",
+      "latitude": 38.54126,
+      "longitude": -0.10641,
+      "coordinate_precision": "mapped",
+      "category": "health_wellness",
+      "photo": {
+        "source_page_url": "https://www.imedhospitales.com/",
+        "selection": "Official exterior/facilities image for IMED Levante",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "A practical rather than glamorous luxury-buyer asset: a major private hospital in Benidorm with 24-hour emergency, surgery, diagnostics and strong experience with international patients. It materially reduces the 'what happens if something goes wrong?' objection for foreign families.",
+      "rating": {
+        "score": 3.2,
+        "scale": 5,
+        "aggregator": "Google via review aggregator",
+        "review_count": 1655,
+        "note": "Consumer-review score reflects service experience and should not be treated as a clinical-quality metric."
+      },
+      "official_or_primary_source_url": "https://www.imedhospitales.com/"
+    },
+    {
+      "name": "Alicante-Elche Miguel Hernández Airport — General Aviation / T2",
+      "latitude": 38.2822,
+      "longitude": -0.5582,
+      "coordinate_precision": "airport_reference_point",
+      "category": "connectivity",
+      "photo": {
+        "source_page_url": "https://www.aena.es/en/alicante-elche-miguel-hernandez.html",
+        "selection": "Official terminal/airside image",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "The key international-access argument for Benidorm: a major Costa Blanca airport with a dedicated general-aviation terminal and executive handling capability. For a second-home buyer, frequent direct air access and private-aviation support are more decision-relevant than prestige retail inside the city.",
+      "rating": {
+        "score": 4.3,
+        "scale": 5,
+        "aggregator": "Google via airport aggregator",
+        "review_count": 23634
+      },
+      "official_or_primary_source_url": "https://www.aena.es/en/alicante-elche-miguel-hernandez.html"
+    },
+    {
+      "name": "Asia Gardens Hotel & Thai Spa",
+      "latitude": 38.553444,
+      "longitude": -0.172444,
+      "coordinate_precision": "official_gps",
+      "category": "luxury_lifestyle",
+      "photo": {
+        "source_page_url": "https://www.asiagardens.es/en/",
+        "selection": "Official tropical gardens/infinity-pool hero image",
+        "usage_note": "Confirm image rights before commercial reuse."
+      },
+      "summary": "A five-star resort environment immediately outside Benidorm with extensive Asian gardens, nine pools, multiple restaurants, Thai spa, tennis/padel and concierge-style hospitality. It is useful in sales because it demonstrates that resort-grade luxury already exists locally, rather than only in Marbella or Mallorca.",
+      "rating": {
+        "score": 4.4,
+        "scale": 5,
+        "aggregator": "Tripadvisor",
+        "review_count": 3259
+      },
+      "official_or_primary_source_url": "https://www.asiagardens.es/en/"
+    }
+  ]
+}
