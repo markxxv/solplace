@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Benidorm</title>
+</head>
+<body>
+
+<nav id="site_navbar" x-data="{ scrolled: false }" x-init="window.addEventListener('scroll', () =&gt; scrolled = window.scrollY &gt; 50)" :class="scrolled ? 'site_nav_scrolled' : 'site_nav_top'" class="site_nav site_nav_top">
+    <!-- Logo -->
+    <a href="https://rusolprime.com" class="site_nav_logo_link">
+        <img src="https://rusolprime.com/img/logo_group.svg" alt="Rusól Prime" class="site_nav_logo">
+    </a>
+
+    <!-- Desktop Links -->
+    <ul class="site_nav_links">
+
+        <a href="https://rusolprime.com/objects" class="site_nav_link nav-link-line">
+            Properties
+        </a>
+
+        <a href="https://rusolprime.com/services" class="site_nav_link nav-link-line">
+            Services
+        </a>
+
+        <a href="https://rusolprime.com/guide" class="site_nav_link nav-link-line">
+            Guide
+        </a>
+
+        <a href="https://rusolprime.com/blog" class="site_nav_link nav-link-line">
+            Journal
+        </a>
+
+        
+                    <a href="https://rusolprime.com/about-us" class="site_nav_link nav-link-line">
+                Company
+            </a>
+        
+        
+        
+        <a href="https://rusolprime.com/contacts" class="site_nav_link nav-link-line">
+            Contact
+        </a>
+
+    </ul>
+
+    <!-- Right -->
+    <div class="site_nav_right">
+
+        <div x-data="{ open: false }" @click.outside="open = false" class="relative block">
+    <button @click="open = !open" class="flex items-center gap-1.5 text-cream/55 hover:text-cream transition-colors duration-200 cursor-pointer bg-transparent border-0 p-0">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="text-[11px] tracking-[0.14em] uppercase">EN</span>
+        <svg :class="open?'rotate-180':''" class="w-2.5 h-2.5 transition-transform duration-200" viewBox="0 0 10 6" fill="none">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"></path>
+        </svg>
+    </button>
+    <div x-show="open" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-100" x-transition:leave-end="opacity-0" class="absolute rounded-xl right-0 top-full mt-2 w-34 p-4 bg-[#0e0d0b] shadow-2xl border border-cream/[0.07] z-50" style="display: none;">
+        <a href="/ru/" class="w-full flex items-center justify-between px-4 py-2.5 text-left no-underline transition-colors duration-150 text-cream/50 hover:text-cream/90">
+            <span class="text-[11px] tracking-[0.12em] uppercase">Русский</span>
+        </a>
+        <a href="/" class="w-full flex items-center justify-between px-4 py-2.5 text-left no-underline transition-colors duration-150 text-gold">
+            <span class="text-[11px] tracking-[0.12em] uppercase">English</span>
+        </a>
+        <a href="/es/" class="w-full flex items-center justify-between px-4 py-2.5 text-left no-underline transition-colors duration-150 text-cream/50 hover:text-cream/90">
+            <span class="text-[11px] tracking-[0.12em] uppercase">Español</span>
+        </a>
+        <a href="/de/" class="w-full flex items-center justify-between px-4 py-2.5 text-left no-underline transition-colors duration-150 text-cream/50 hover:text-cream/90">
+            <span class="text-[11px] tracking-[0.12em] uppercase">Deutsch</span>
+        </a>
+    </div>
+</div>
+
+        <!-- Mobile burger -->
+        <button id="mob-open" class="site_nav_burger" aria-label="Открыть меню">
+            <span class="site_nav_burger_line"></span>
+            <span class="site_nav_burger_line site_nav_burger_line_short"></span>
+            <span class="site_nav_burger_line"></span>
+        </button>
+
+    </div>
+</nav>
+
+      
+</body>
+</html>
