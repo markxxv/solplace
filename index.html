@@ -340,5 +340,239 @@
     </div>
 </section>
 
+
+<section class="bg-cream py-20 md:py-24 lg:py-28"
+         x-data="benidormContent()"
+         x-init="load()">
+    <div class="mx-auto max-w-7xl px-4 md:px-10">
+
+        <div class="grid gap-16 lg:grid-cols-12 lg:gap-20">
+            <div class="lg:col-span-7">
+                <div class="text-[9px] uppercase tracking-[0.2em] text-dark/30">Property selection</div>
+
+                <div class="mt-8 space-y-7">
+                    <template x-for="property in properties" :key="property.url">
+                        <a :href="property.url"
+                           class="group grid grid-cols-[112px_1fr] items-center gap-4 no-underline sm:grid-cols-[148px_1fr_auto] md:gap-6">
+
+                            <div class="aspect-[4/3] overflow-hidden rounded-xl bg-zinc-200">
+                                <img :src="property.image"
+                                     :alt="property.title"
+                                     loading="lazy"
+                                     class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.025]">
+                            </div>
+
+                            <div class="min-w-0">
+                                <div class="mb-2 text-[9px] uppercase tracking-[0.16em] text-dark/30"
+                                     x-text="property.category"></div>
+
+                                <h2 class="m-0 line-clamp-2 max-w-xl font-serif text-[19px] font-light leading-[1.16] text-dark transition-colors duration-200 group-hover:text-dark/65 md:text-[22px]"
+                                    x-text="property.title"></h2>
+
+                                <div class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[10px] font-light text-dark/40">
+                                    <span x-text="property.area"></span>
+                                    <span x-text="property.bedrooms"></span>
+                                    <span x-text="property.bathrooms"></span>
+                                </div>
+                            </div>
+
+                            <div class="hidden text-right sm:block">
+                                <div class="font-serif text-xl font-light text-dark" x-text="property.price"></div>
+                                <i class="ti ti-arrow-up-right mt-3 inline-block text-[14px] text-dark/20 transition-colors duration-200 group-hover:text-dark/55"></i>
+                            </div>
+                        </a>
+                    </template>
+                </div>
+            </div>
+
+            <div class="lg:col-span-4 lg:col-start-9 lg:pt-8">
+                <div class="text-[9px] uppercase tracking-[0.2em] text-dark/30">Benidorm</div>
+
+                <h2 class="mt-6 max-w-md font-serif text-3xl font-light leading-[1.08] tracking-[-0.02em] text-dark md:text-4xl">
+                    A Mediterranean city built for everyday life
+                </h2>
+
+                <div class="mt-7 max-w-md space-y-5 text-[13px] font-light leading-[1.75] text-dark/55">
+                    <p>
+                        Benidorm is one of the Costa Blanca’s few coastal cities where a home by the sea can work as a genuine year-round base. Poniente feels more residential, while Finestrat adds villas, privacy and elevation above the coast.
+                    </p>
+                    <p>
+                        For international families, the wider area matters as much as the address itself: British schools, private healthcare, golf, marinas, wellness and Alicante airport all sit within the practical daily radius.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="places" class="scroll-mt-24 pt-24 lg:pt-28">
+            <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+                <div>
+                    <div class="text-[9px] uppercase tracking-[0.2em] text-dark/30">Around Benidorm</div>
+                    <h2 class="mt-4 font-serif text-3xl font-light leading-none text-dark md:text-4xl">
+                        Places that matter
+                    </h2>
+                </div>
+
+                <div class="flex max-w-3xl flex-wrap gap-2">
+                    <template x-for="filter in filters" :key="filter.value">
+                        <button type="button"
+                                @click="activeCategory = filter.value"
+                                :class="activeCategory === filter.value ? 'bg-dark text-cream' : 'bg-[#EAE5DC] text-dark/45 hover:text-dark'"
+                                class="h-8 cursor-pointer rounded-full px-3 text-[9px] tracking-[0.08em] transition-colors duration-200"
+                                x-text="filter.label">
+                        </button>
+                    </template>
+                </div>
+            </div>
+
+            <div class="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                <template x-for="place in filteredPlaces" :key="place.name">
+                    <button type="button"
+                            @click="selectedPlace = place; $nextTick(() => $refs.placePopover.showPopover())"
+                            class="group cursor-pointer bg-transparent p-0 text-left">
+                        <img :src="placeImage(place)"
+                             :alt="place.name"
+                             loading="lazy"
+                             class="h-16 w-16 rounded-full object-cover md:h-[72px] md:w-[72px]">
+
+                        <div class="mt-4 max-w-[180px] text-[12px] font-light leading-snug text-dark/70 transition-colors duration-200 group-hover:text-dark"
+                             x-text="place.name"></div>
+
+                        <div class="mt-1.5 text-[8px] uppercase tracking-[0.16em] text-dark/30"
+                             x-text="placeType(place.category)"></div>
+                    </button>
+                </template>
+            </div>
+
+            <div x-ref="placePopover"
+                 popover
+                 class="fixed bottom-5 right-5 left-auto top-auto m-0 w-[calc(100%-2.5rem)] max-w-[420px] rounded-2xl bg-dark p-6 text-cream shadow-2xl md:bottom-8 md:right-8 md:p-7">
+
+                <template x-if="selectedPlace">
+                    <div>
+                        <div class="flex items-start gap-4">
+                            <img :src="placeImage(selectedPlace)"
+                                 :alt="selectedPlace.name"
+                                 class="h-14 w-14 shrink-0 rounded-full object-cover">
+
+                            <div class="min-w-0 flex-1">
+                                <div class="text-[8px] uppercase tracking-[0.18em] text-cream/30"
+                                     x-text="placeType(selectedPlace.category)"></div>
+                                <div class="mt-1.5 font-serif text-xl font-light leading-tight text-cream"
+                                     x-text="selectedPlace.name"></div>
+                            </div>
+
+                            <button type="button"
+                                    @click="$refs.placePopover.hidePopover()"
+                                    class="flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-full bg-cream/[0.07] text-cream/40 transition-colors duration-200 hover:text-cream"
+                                    aria-label="Close">
+                                <i class="ti ti-x text-[15px]"></i>
+                            </button>
+                        </div>
+
+                        <p class="mt-6 text-[12px] font-light leading-[1.7] text-cream/55"
+                           x-text="selectedPlace.summary"></p>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    function benidormContent() {
+        return {
+            properties: [],
+            places: [],
+            activeCategory: 'all',
+            selectedPlace: null,
+
+            filters: [
+                { value: 'all', label: 'All' },
+                { value: 'education', label: 'Schools' },
+                { value: 'fine_dining', label: 'Dining' },
+                { value: 'golf_sport', label: 'Golf & sport' },
+                { value: 'yachting_water', label: 'Yachting' },
+                { value: 'nature_beach', label: 'Nature' },
+                { value: 'health_wellness', label: 'Wellness' },
+                { value: 'connectivity', label: 'Access' },
+                { value: 'luxury_lifestyle', label: 'Lifestyle' },
+            ],
+
+            categoryImages: {
+                education: 'https://www.ladyelizabethschool.com/IB%20-%20Lady%20Elizabeth%20School/Facilities/5339/image-thumb__5339__w1920/School-overview-les-alicante.8d762d0b.webp',
+                fine_dining: 'https://imag.bonviveur.com/exterior-de-quique-dacosta-restaurante-en-denia.jpg',
+                golf_sport: 'https://www.golfholidays.com/images/2000-10316/villaitana-poniente-golf-course-hosts-some-of-the-preferred-golf-course-in-costa-blanca.jpg',
+                yachting_water: 'https://www.acronautica.com/wp-content/uploads/2022/06/Marina-Greenwich-980x639-1.jpg',
+                nature_beach: 'https://cdn-cms.bookingexperts.com/media/4005/12/preprocessed.jpg',
+                health_wellness: 'https://media.vogue.fr/photos/5c5872e63b3b29d53bfabca8/1%3A1/w_2911%2Ch_2911%2Cc_limit/Photo%201%20Exteriors%20-Infinity%20pool.jpg',
+                connectivity: 'https://daveinspain.com/wp-content/uploads/2023/09/alicante-airport.jpg',
+                luxury_lifestyle: 'https://7televalencia.com/wp-content/uploads/2018/07/asia-gardens.jpg',
+            },
+
+            placeImages: {
+                "Elian's British School of La Nucía": 'https://elians-british-school-la-nucia.dukeseducation.es/wp-content/uploads/entorno.webp',
+                'Lady Elizabeth School': 'https://www.ladyelizabethschool.com/IB%20-%20Lady%20Elizabeth%20School/Facilities/5339/image-thumb__5339__w1920/School-overview-les-alicante.8d762d0b.webp',
+                'Quique Dacosta Restaurante': 'https://imag.bonviveur.com/exterior-de-quique-dacosta-restaurante-en-denia.jpg',
+                'Marina Greenwich / Puerto Deportivo Campomanes': 'https://www.acronautica.com/wp-content/uploads/2022/06/Marina-Greenwich-980x639-1.jpg',
+                'Playa de Poniente': 'https://cdn-cms.bookingexperts.com/media/4005/12/preprocessed.jpg',
+                'SHA Wellness Clinic': 'https://media.vogue.fr/photos/5c5872e63b3b29d53bfabca8/1%3A1/w_2911%2Ch_2911%2Cc_limit/Photo%201%20Exteriors%20-Infinity%20pool.jpg',
+                'Alicante-Elche Miguel Hernández Airport — General Aviation / T2': 'https://daveinspain.com/wp-content/uploads/2023/09/alicante-airport.jpg',
+                'Asia Gardens Hotel & Thai Spa': 'https://7televalencia.com/wp-content/uploads/2018/07/asia-gardens.jpg',
+            },
+
+            async load() {
+                const [propertiesResponse, placesResponse] = await Promise.all([
+                    fetch('./properties.json'),
+                    fetch('./places.json'),
+                ]);
+
+                const properties = await propertiesResponse.json();
+                const placesData = await placesResponse.json();
+
+                this.properties = properties
+                    .slice()
+                    .sort((a, b) => this.priceNumber(b.price) - this.priceNumber(a.price))
+                    .slice(0, 4);
+
+                this.places = placesData.places || [];
+            },
+
+            priceNumber(value) {
+                return Number(String(value || '').replace(/[^0-9]/g, '')) || 0;
+            },
+
+            get filteredPlaces() {
+                if (this.activeCategory === 'all') {
+                    return this.places;
+                }
+
+                return this.places.filter(place => place.category === this.activeCategory);
+            },
+
+            placeImage(place) {
+                return this.placeImages[place.name]
+                    || this.categoryImages[place.category]
+                    || this.categoryImages.nature_beach;
+            },
+
+            placeType(category) {
+                const labels = {
+                    education: 'Education',
+                    fine_dining: 'Fine dining',
+                    golf_sport: 'Golf & sport',
+                    yachting_water: 'Yachting',
+                    nature_beach: 'Nature & beach',
+                    health_wellness: 'Health & wellness',
+                    connectivity: 'Connectivity',
+                    luxury_lifestyle: 'Lifestyle',
+                };
+
+                return labels[category] || category;
+            },
+        };
+    }
+</script>
+
 </body>
 </html>
