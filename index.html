@@ -4,8 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script src="//unpkg.com/alpinejs" defer></script>
+     <script src="//unpkg.com/alpinejs" defer></script>
     <title>Benidorm</title>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-gold:       #C9A96E;
+            --color-gold-light: #E2C99A;
+            --color-cream:      #F5F0E8;
+            --color-dark:       #0E0D0B;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans:  'Inter', sans-serif;
+        }
+    
+        .site_nav {
+            @apply relative top-0 inset-x-0 z-50 flex items-center justify-between px-4 transition-all duration-300 md:fixed md:px-10;
+        }
+    
+        .site_nav {
+            @apply top-0 inset-x-0 z-50 flex items-center justify-between px-4 transition-all duration-300 md:fixed md:px-10;
+            transform: translateY(0);
+        }
+    
+        .site_nav_hidden {
+            transform: translateY(-100%);
+        }
+    
+        .site_nav_top {
+            @apply bg-transparent py-5;
+        }
+    
+        .site_nav_scrolled {
+            @apply bg-dark/90 py-4 backdrop-blur-md;
+        }
+    
+        .site_nav_logo_link {
+            @apply z-10 shrink-0;
+        }
+    
+        .site_nav_logo {
+            @apply h-6 w-auto;
+        }
+    
+        .site_nav_links {
+            @apply m-0 hidden list-none gap-5 p-0 lg:flex;
+        }
+    
+        .site_nav_link {
+            @apply block py-1 text-[11px] uppercase tracking-[0.16em] text-cream/60 no-underline transition-colors duration-200 hover:text-cream;
+        }
+    
+        .site_nav_right {
+            @apply flex items-center gap-4;
+        }
+    
+    
+        /* Burger */
+    
+        .site_nav_burger {
+            @apply z-10 flex cursor-pointer flex-col gap-[5px] border-0 bg-transparent p-1 lg:hidden;
+        }
+    
+        .site_nav_burger_line {
+            @apply block h-px w-6 bg-cream/70;
+        }
+    
+        .site_nav_burger_line_short {
+            @apply w-4;
+        }
+    
+    
+        /* =========================
+           MOBILE MENU
+        ========================= */
+    
+        .site_mobile_menu {
+            @apply fixed inset-0 z-[100] flex justify-end lg:hidden;
+        }
+    
+        .site_mobile_backdrop {
+            @apply absolute inset-0 bg-black/60 backdrop-blur-sm;
+        }
+    
+        .site_mobile_drawer {
+            @apply relative flex h-full w-full max-w-md flex-col overflow-hidden bg-[#0e0d0b];
+        }
+    
+    
+        /* Header */
+    
+        .site_mobile_header {
+            @apply flex items-center justify-between px-6 pb-4 pt-6;
+        }
+    
+        .site_mobile_logo {
+            @apply h-6 w-auto;
+        }
+    
+        .site_mobile_close {
+            @apply flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border-0 bg-cream/[0.06] text-cream/60 transition-all duration-300 hover:bg-cream/[0.1] hover:text-cream;
+        }
+    
+    
+        /* Navigation */
+    
+        .site_mobile_navigation {
+            @apply flex flex-1 flex-col justify-center px-6 py-8;
+        }
+    
+        .site_mobile_navigation_label {
+            @apply mb-8 text-[10px] uppercase tracking-[0.22em] text-cream/25;
+        }
+    
+        .site_mobile_links {
+            @apply flex flex-col;
+        }
+    
+        .site_mobile_link {
+            @apply flex items-center justify-between py-3 no-underline;
+        }
+    
+        .site_mobile_link_title {
+            @apply text-3xl font-light tracking-tight text-cream/90 transition-colors duration-300;
+        }
+    
+        .site_mobile_link:hover .site_mobile_link_title {
+            @apply text-gold;
+        }
+    
+        .site_mobile_link_number {
+            @apply text-[10px] tracking-[0.14em] text-cream/20;
+        }
+
+    </style>
+
+    
 </head>
 <body>
 
